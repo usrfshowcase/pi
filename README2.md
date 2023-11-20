@@ -41,7 +41,9 @@ Representa uma seção ou bloco de conteúdo na página.
 }
 ```
 
-#### Carousel Section
+## Carousel  Section
+
+#### Carousel Section Object
 
 | **CAMPO**     | **TIPO**                                  | **DESCRIÇÃO**                                                                                                                                      |
 |---------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -52,6 +54,20 @@ Representa uma seção ou bloco de conteúdo na página.
 | imageFileName | string *ou* null                          | o nome do arquivo da imagem dessa seção                                                                                                            |
 | reversed      | boolean                                   | se a seção deve ser mostrada de forma invertida                                                                                                    |
 | centered      | boolean                                   | se a seção deve ser mostrada de forma centralizada                                                                                                 |
+
+#### Exemplo de Seção de Carousel
+
+```json
+{
+  "id": "4d0ee91f-f696-41f3-be52-8b8c9a87139d",
+  "position": 2,
+  "title": "Fulano Ciclano",
+  "text": "Fulano Ciclano é um programador frontend atualmente cursando o curso de Técnico em Informática para Internet em ...",
+  "imageFileName": "fulanociclano.svg",
+  "reversed": false,
+  "centered": false
+}
+```
 
 ---
 
