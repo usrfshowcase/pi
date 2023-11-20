@@ -25,6 +25,22 @@ Representa uma seção ou bloco de conteúdo na página.
 | centered           | boolean                                   | se a seção deve ser mostrada de forma centralizada                                                                                                 |
 | backgroundColorHex | string                                    | a cor de fundo da seção em código hex                                                                                                              |
 
+#### Exemplo de Seção
+
+```json
+{
+  "id": "a6636c75-8455-4c9f-9784-a6f5ed2225be",
+  "position": 0,
+  "title": "O <equilíbrio> perfeito entre vida e trabalho",
+  "text": "Descubra a fórmula para alcançar o equilíbrio perfeito entre vida e trabalho e viva uma experiência extraordinária em todas as áreas da sua vida.",
+  "button": null,
+  "imageFileName": "multitasking.svg",
+  "reversed": false,
+  "centered": false,
+  "backgroundColorHex": "#ffff"
+}
+```
+
 #### Carousel Section
 
 | **CAMPO**     | **TIPO**                                  | **DESCRIÇÃO**                                                                                                                                      |
@@ -138,6 +154,19 @@ Cria uma nova seção de carousel. Retorna um [carousel section](#carousel-secti
 | 400 Bad Request | ValidationError                                     | algum campo da requisição tem um tipo inesperado                |
 | 403 Forbidden   | NotAllowedError                                     | o cliente não tem permissão para acessar essa rota              |
 | 409 Conflict    | PositionAlreadyOccupiedError                        | a posição informada já está ocupada por outra seção de carousel |
+
+---
+
+## Buscar Seções de Carousel
+#### GET /carousel-sections
+
+Busca as seções de carousel em ordem de posição. Retorna um array de [carousel section](#carousel-section-object) objects em caso de sucesso.
+
+#### Respostas
+
+|  **CÓDIGO** | **TIPO**                                                      | **DESCRIÇÃO**                               |
+|-------------|---------------------------------------------------------------|---------------------------------------------|
+| 200 Ok      | array de [carousel section](#carousel-section-object) objects | as seções de carousel ordenadas por posição |
 
 ---
 
