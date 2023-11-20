@@ -69,6 +69,17 @@ Representa uma seção ou bloco de conteúdo na página.
 }
 ```
 
+## Sugestão
+
+#### Suggestion Object
+
+| **CAMPO**  | **TIPO** | **DESCRIÇÃO**                       |
+|------------|----------|-------------------------------------|
+| id         | string   | identificador único de uma sugestão |
+| macAddress | string   | endereço mac do autor               |
+| email      | string   | email do autor                      |
+| message    | string   | sugestão do autor                   |
+
 ---
 
 # Endpoints
@@ -211,3 +222,25 @@ Editar uma seção de carousel existente. Retorna o [carousel section](#carousel
 | 403 Forbidden   | NotAllowedError                                     | o cliente não tem permissão para acessar essa rota              |
 | 404 Not Found   | CarouselSectionNotFoundError                        | não existe uma seção de carousel com o id informado             |
 | 409 Conflict    | PositionAlreadyOccupiedError                        | a posição informada já está ocupada por outra seção de carousel |
+
+---
+
+## Criar Sugestão
+#### POST /suggestions
+
+Cria uma nova sugestão. Retorna `null` em caso de sucesso.
+
+#### Parâmetros de Body JSON
+
+| **CAMPO**  | **TIPO** | **DESCRIÇÃO**                       |
+|------------|----------|-------------------------------------|
+| macAddress | string   | endereço mac do autor               |
+| email      | string   | email do autor                      |
+| message    | string   | sugestão do autor                   |
+
+#### Respostas
+
+| **CÓDIGO**      | **TIPO**        | **DESCRIÇÃO**                                    |
+|-----------------|-----------------|--------------------------------------------------|
+| 201 Created     | null            | a sugestão foi enviada com sucesso               |
+| 400 Bad Request | ValidationError | algum campo da requisição tem um tipo inesperado |
