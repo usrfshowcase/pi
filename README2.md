@@ -50,7 +50,7 @@ Cria uma nova seção. Retorna um [section](#section-object) object em caso de s
 |  **CÓDIGO**     | **TIPO**                          | **DESCRIÇÃO**                                       |
 |-----------------|-----------------------------------|-----------------------------------------------------|
 | 201 Created     | [section](#section-object) object | a seção que foi criada                              |
-| 400 Bad Request | Error                             | algum campo da requisição tem um tipo inesperado    |
+| 400 Bad Request | ValidationError                   | algum campo da requisição tem um tipo inesperado    |
 | 403 Forbidden   | NotAllowedError                   | o cliente não tem permissão para acessar essa rota  |
 | 409 Conflict    | PositionAlreadyOccupiedError      | a posição informada já está ocupada por outra seção |
 
@@ -78,7 +78,7 @@ Edita uma seção existente. Retorna o [section](#section-object) object editado
 |  **CÓDIGO**     | **TIPO**                          | **DESCRIÇÃO**                                       |
 |-----------------|-----------------------------------|-----------------------------------------------------|
 | 200 Ok          | [section](#section-object) object | a seção que foi editada                             |
-| 400 Bad Request | Error                             | algum campo da requisição tem um tipo inesperado    |
+| 400 Bad Request | ValidationError                   | algum campo da requisição tem um tipo inesperado    |
 | 403 Forbidden   | NotAllowedError                   | o cliente não tem permissão para acessar essa rota  |
 | 404 Not Found   | SectionNotFoundError              | não existe uma seção com o id informado             |
 | 409 Conflict    | PositionAlreadyOccupiedError      | a posição informada já está ocupada por outra seção |
