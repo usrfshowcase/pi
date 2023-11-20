@@ -13,6 +13,8 @@
 | imageFileName      | string   | file name for this content's image                                     |
 | backgroundColorHex | string   | hex code for content's background color                                |
 
+---
+
 # Carousel Content
 
 ## Carousel Content Object
@@ -23,6 +25,8 @@
 | name          | string   | person's name                                                                  |
 | description   | string   | person's description                                                           |
 | imageFileName | string   | file name for person's image                                                   |
+
+---
 
 ## Create Carousel Content
 #### POST /caroulsel-contents/
