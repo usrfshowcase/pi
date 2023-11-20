@@ -121,23 +121,23 @@ Cria uma nova seção de carousel. Retorna um [carousel section](#carousel-secti
 
 #### Parâmetros de Body JSON
 
-| **CAMPO**     | **TIPO**                                  | **DESCRIÇÃO**                                      |
-|---------------|-------------------------------------------|----------------------------------------------------|
-| position      | integer                                   | a posição da seção em relação com as outras seções |
-| title         | string                                    | representa o titulo de um texto.                   |
-| text          | string                                    | o texto da seção                                   |
-| imageFileName | string *ou* null                          | o nome do arquivo da imagem dessa seção            |
-| reversed      | boolean                                   | se a seção deve ser mostrada de forma invertida    |
-| centered      | boolean                                   | se a seção deve ser mostrada de forma centralizada |
+| **CAMPO**     | **TIPO**                                  | **DESCRIÇÃO**                                                  |
+|---------------|-------------------------------------------|----------------------------------------------------------------|
+| position      | integer                                   | a posição da seção de carousel em relação com as outras seções |
+| title         | string                                    | representa o titulo de um texto.                               |
+| text          | string                                    | o texto da seção de carousel                                   |
+| imageFileName | string *ou* null                          | o nome do arquivo da imagem dessa seção de carousel            |
+| reversed      | boolean                                   | se a seção de carousel deve ser mostrada de forma invertida    |
+| centered      | boolean                                   | se a seção de carousel deve ser mostrada de forma centralizada |
 
 #### Respostas
 
-|  **CÓDIGO**     | **TIPO**                                            | **DESCRIÇÃO**                                       |
-|-----------------|-----------------------------------------------------|-----------------------------------------------------|
-| 201 Created     | [carousel section](#carousel-section-object) object | a seção de carousel que foi criada                  |
-| 400 Bad Request | ValidationError                                     | algum campo da requisição tem um tipo inesperado    |
-| 403 Forbidden   | NotAllowedError                                     | o cliente não tem permissão para acessar essa rota  |
-| 409 Conflict    | PositionAlreadyOccupiedError                        | a posição informada já está ocupada por outra seção |
+|  **CÓDIGO**     | **TIPO**                                            | **DESCRIÇÃO**                                                   |
+|-----------------|-----------------------------------------------------|-----------------------------------------------------------------|
+| 201 Created     | [carousel section](#carousel-section-object) object | a seção de carousel que foi criada                              |
+| 400 Bad Request | ValidationError                                     | algum campo da requisição tem um tipo inesperado                |
+| 403 Forbidden   | NotAllowedError                                     | o cliente não tem permissão para acessar essa rota              |
+| 409 Conflict    | PositionAlreadyOccupiedError                        | a posição informada já está ocupada por outra seção de carousel |
 
 ---
 
@@ -148,21 +148,21 @@ Editar uma seção de carousel existente. Retorna o [carousel section](#carousel
 
 #### Parâmetros de Body JSON
 
-| **CAMPO**     | **TIPO**                                   | **DESCRIÇÃO**                                      |
-|---------------|--------------------------------------------|----------------------------------------------------|
-| position      | ?integer                                   | a posição da seção em relação com as outras seções |
-| title         | ?string                                    | representa o titulo de um texto.                   |
-| text          | ?string                                    | o texto da seção                                   |
-| imageFileName | ?string *ou* null                          | o nome do arquivo da imagem dessa seção            |
-| reversed      | ?boolean                                   | se a seção deve ser mostrada de forma invertida    |
-| centered      | ?boolean                                   | se a seção deve ser mostrada de forma centralizada |
+| **CAMPO**     | **TIPO**                                   | **DESCRIÇÃO**                                                  |
+|---------------|--------------------------------------------|----------------------------------------------------------------|
+| position      | ?integer                                   | a posição da seção de carousel em relação com as outras seções |
+| title         | ?string                                    | representa o titulo de um texto.                               |
+| text          | ?string                                    | o texto da seção de carousel                                   |
+| imageFileName | ?string *ou* null                          | o nome do arquivo da imagem dessa seção                        |
+| reversed      | ?boolean                                   | se a seção de carousel deve ser mostrada de forma invertida    |
+| centered      | ?boolean                                   | se a seção de carousel deve ser mostrada de forma centralizada |
 
 #### Respostas
 
 |  **CÓDIGO**     | **TIPO**                                            | **DESCRIÇÃO**                                       |
 |-----------------|-----------------------------------------------------|-----------------------------------------------------|
-| 200 Ok          | [carousel section](#carousel-section-object) object | a seção que foi editada                             |
+| 200 Ok          | [carousel section](#carousel-section-object) object | a seção de carousel que foi editada                 |
 | 400 Bad Request | ValidationError                                     | algum campo da requisição tem um tipo inesperado    |
 | 403 Forbidden   | NotAllowedError                                     | o cliente não tem permissão para acessar essa rota  |
-| 404 Not Found   | SectionNotFoundError                                | não existe uma seção com o id informado             |
+| 404 Not Found   | SectionNotFoundError                                | não existe uma seção de carousel com o id informado |
 | 409 Conflict    | PositionAlreadyOccupiedError                        | a posição informada já está ocupada por outra seção |
